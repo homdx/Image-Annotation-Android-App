@@ -69,8 +69,7 @@ RUN wget https://www.crystax.net/download/crystax-ndk-10.3.1-linux-x86_64.tar.xz
 
 #USER ${USER}
 
-RUN buildozer init && echo '-----Python 3 ----' &&  time buildozer android debug || echo "Fix build apk" \
-&& cp -v ${WORK_DIR}/.buildozer/android/platform/python-for-android-new-toolchain/MyApplication-0.1-debug.apk ${WORK_DIR}
+RUN echo '-----Python 3 ----' &&  time buildozer android debug || echo "Fix build apk"
 
 CMD tail -f /var/log/faillog
 
