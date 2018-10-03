@@ -70,7 +70,7 @@ RUN wget https://www.crystax.net/download/crystax-ndk-10.3.1-linux-x86_64.tar.xz
 #USER ${USER}
 
 RUN echo '-----Python 3 ----' &&  time buildozer android debug || echo "Fix build apk" \
-    && cp -vf ${WORK_DIR}/.buildozer/android/platform/build/dists/imageannotationandroidapp/build/outputs/apk/imageannotationandroidapp-debug.apk ${WORK_DIR}
+    && cp -vf ${WORK_DIR}/.buildozer/android/platform/python-for-android-new-toolchain/ImageAnnotationAndroidApp-0.1-debug.apk ${WORK_DIR}
 
 CMD tail -f /var/log/faillog
 
